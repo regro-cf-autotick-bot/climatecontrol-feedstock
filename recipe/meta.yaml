@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
-  sha256: 82da2a9e959a5da64a1fb44f6c13dd8e0e1a00e5c3930c13fe32034639c0d77c
+  sha256: 6bf8f1e93b07d102477754c77022139085dbda1cc486e2c3a1a697ed027e19b9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - setuptools_scm
+    - poetry-core >=1.0.0,<2.0.0
     - pytest-runner
   run:
     - python >=3.6
