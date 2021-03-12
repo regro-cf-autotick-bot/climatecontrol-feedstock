@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
-  sha256: 82da2a9e959a5da64a1fb44f6c13dd8e0e1a00e5c3930c13fe32034639c0d77c
+  sha256: 6bf8f1e93b07d102477754c77022139085dbda1cc486e2c3a1a697ed027e19b9
 
 build:
   number: 0
