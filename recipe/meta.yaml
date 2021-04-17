@@ -1,5 +1,5 @@
 {% set name = "climatecontrol" %}
-{% set version = "0.9.2" %}
+{% set version = "0.10.0" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
-  sha256: 6bf8f1e93b07d102477754c77022139085dbda1cc486e2c3a1a697ed027e19b9
+  sha256: ee3c84a452c301da7e8d23d2cc0d73c9e679d2a849d7c7843055f65e564d37a8
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
