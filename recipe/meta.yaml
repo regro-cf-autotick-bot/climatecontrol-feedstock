@@ -1,5 +1,5 @@
 {% set name = "climatecontrol" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
-  sha256: ee3c84a452c301da7e8d23d2cc0d73c9e679d2a849d7c7843055f65e564d37a8
+  sha256: ad2f8da62eb1dd6cae4d4721c8b6628484d8d1cdccb780cfe047fe53dc50604d
 
 build:
   number: 0
@@ -18,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.7
     - poetry-core >=1.0.0,<2.0.0
     - pytest-runner
   run:
-    - python >=3.6
+    - python >=3.7
     - wrapt
 
 test:
