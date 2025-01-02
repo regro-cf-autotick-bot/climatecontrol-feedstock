@@ -7,22 +7,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/climatecontrol-{{ version }}.tar.gz
   sha256: ad2f8da62eb1dd6cae4d4721c8b6628484d8d1cdccb780cfe047fe53dc50604d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - poetry-core >=1.0.0,<2.0.0
     - pytest-runner
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - wrapt
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/daviskirk/climatecontrol
